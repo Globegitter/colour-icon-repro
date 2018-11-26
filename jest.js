@@ -31,7 +31,8 @@ jest
       env: 'jsdom',
       ci: false,
       updateSnapshot: false,
-      _: ["sum.test.js"],
+      verbose: true,
+      _: ["sum.test.js", "multiply.test.js"],
     },
     [cwd],
   )

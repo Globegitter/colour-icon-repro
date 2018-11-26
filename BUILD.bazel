@@ -3,9 +3,11 @@ load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary", "nodejs_test")
 nodejs_binary(
     name = "jest_bin",
     data = [
-        ":jest.js",
+        "jest.js",
         ":sum.js",
         ":sum.test.js",
+        ":multiply.js",
+        ":multiply.test.js",
         "@myyarn//jest-cli",
         "@myyarn//fs-extra",
     ],
@@ -15,9 +17,11 @@ nodejs_binary(
 nodejs_test(
     name = "jest_test",
     data = [
-        ":jest.js",
+        "jest.js",
         ":sum.js",
         ":sum.test.js",
+        ":multiply.js",
+        ":multiply.test.js",
         "@myyarn//jest-cli",
         "@myyarn//fs-extra",
     ],
