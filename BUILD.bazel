@@ -1,0 +1,25 @@
+load("@build_bazel_rules_nodejs//:defs.bzl", "nodejs_binary", "nodejs_test")
+
+nodejs_binary(
+    name = "jest_bin",
+    data = [
+        ":jest.js",
+        ":sum.js",
+        ":sum.test.js",
+        "@myyarn//jest-cli",
+        "@myyarn//fs-extra",
+    ],
+    entry_point = "__main__/jest.js",
+)
+
+nodejs_test(
+    name = "jest_test",
+    data = [
+        ":jest.js",
+        ":sum.js",
+        ":sum.test.js",
+        "@myyarn//jest-cli",
+        "@myyarn//fs-extra",
+    ],
+    entry_point = "__main__/jest.js",
+)

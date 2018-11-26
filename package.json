@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "fs-extra": "^7.0.1",
+    "jest-cli": "^23.6.0"
+  },
+  "resolutions": {
+  }
+}
+  
